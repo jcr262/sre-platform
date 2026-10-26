@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reflex</title>
+<style>
+  :root{
+    --bg:#12161F; --panel:#1B2130; --line:#2C3446;
+    --text:#E8ECF3; --muted:#8793A8;
+    --wait:#B8453F; --go:#1F9E6B; --accent:#F0A64B;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.5 ui-sans-serif,system-ui,-apple-system,sans-serif;
+    display:flex; flex-direction:column; align-items:center;
+    min-height:100vh; padding:24px 16px;
+  }
+  h1{font-size:28px; letter-spacing:-.02em; margin:0 0 4px}
+  .sub{color:var(--muted); font-size:14px; margin:0 0 24px}
+  #pad{
+    width:min(520px,100%); height:260px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    font-size:20px; font-weight:600; cursor:pointer; user-select:none;
+    background:var(--panel); border:1px solid var(--line);
+    transition:background .08s linear; padding:16px;
+  }
+  #pad.wait{background:var(--wait); border-color:var(--wait)}
+  #pad.go{background:var(--go); border-color:var(--go)}
+  #result{min-height:28px; margin:16px 0 0; font-size:18px; font-weight:600}
+  #result small{display:block; font-weight:400; font-size:13px; color:var(--muted); margin-top:2px}
+  .row{display:flex; gap:8px; width:min(520px,100%); margin-top:16px}
+  input,button{
+    font:inherit; padding:10px 12px; border-radius:7px;
+    border:1px solid var(--line); background:var(--panel); color:var(--text);
+  }
+  input{flex:1}
+  button{background:var(--accent); color:#12161F; font-weight:600; border-color:var(--accent); cursor:pointer}
+  button:disabled{opacity:.4; cursor:not-allowed}
+  table{width:min(520px,100%); border-collapse:collapse; margin-top:28px; font-size:15px}
+  caption{text-align:left; color:var(--muted); font-size:13px; padding-bottom:8px;
+          text-transform:uppercase; letter-spacing:.08em}
+  td,th{padding:8px 10px; border-bottom:1px solid var(--line); text-align:left}
+  th{color:var(--muted); font-weight:500; font-size:13px}
+  td:last-child,th:last-child{text-align:right; font-variant-numeric:tabular-nums}
+  .stats{color:var(--muted); font-size:13px; margin-top:20px}
+  .err{color:var(--wait); font-size:13px; margin-top:12px; min-height:18px}
+</style>
+</head>
+<body>
+
+<h1>Reflex</h1>
+<p class="sub">Wait for green, then click. Fastest time wins.</p>
+
+<div id="pad">Click to start</div>
+<p id="result"></p>
+
+<div class="row">
+  <input id="player" maxlength="20" placeholder="Your name" autocomplete="off">
+  <button id="save" disabled>Save score</button>
+</div>
+<p class="err" id="err"></p>
+
+<table>
+  <caption>Leaderboard</caption>
+  <thead><tr><th>#</th><th>Player</th><th>Time</th></tr></thead>
+  <tbody id="board"><tr><td colspan="3">Loading…</td></tr></tbody>
+</table>
+
+<p class="stats" id="stats"></p>
+
+<script>
+const API = '/api';
+const pad = document.getElementById('pad');
+const result = document.getElementById('result');
+const saveBtn = document.getElementById('save');
+const playerInput = document.getElementById('player');
+const err = document.getElementById('err');
+
+let state = 'idle';   // idle | waiting | go
+let timerId = null;
+let greenAt = 0;
+let lastMs = null;
+
+playerInput.value = localStorage.getItem('reflex_player') || '';
+
+pad.addEventListener('click', () => {
+  if (state === 'idle') {
+    state = 'waiting';
+    pad.className = 'wait';
+    pad.textContent = 'Wait for green…';
+    result.textContent = '';
+    saveBtn.disabled = true;
+    timerId = setTimeout(() => {
+      state = 'go';
+      greenAt = performance.now();
+      pad.className = 'go';
+      pad.textContent = 'CLICK!';
+    }, 1200 + Math.random() * 3000);
+
+  } else if (state === 'waiting') {
+    clearTimeout(timerId);
+    state = 'idle';
+    pad.className = '';
+    pad.textContent = 'Click to start';
+    result.innerHTML = 'Too early.<small>You clicked before it turned green.</small>';
+
+  } else if (state === 'go') {
+    lastMs = Math.round(performance.now() - greenAt);
+    state = 'idle';
+    pad.className = '';
+    pad.textContent = 'Click to try again';
+    result.innerHTML = lastMs + ' ms<small>' + verdict(lastMs) + '</small>';
+    saveBtn.disabled = false;
+  }
+});
+
+function verdict(ms) {
+  if (ms < 180) return 'Elite.';
+  if (ms < 250) return 'Fast.';
+  if (ms < 350) return 'Average human.';
+  return 'Room to improve.';
+}
+
+saveBtn.addEventListener('click', async () => {
+  const player = playerInput.value.trim();
+  err.textContent = '';
+  if (!player) { err.textContent = 'Enter a name first.'; return; }
+  if (lastMs === null) return;
+
+  localStorage.setItem('reflex_player', player);
+  saveBtn.disabled = true;
+  try {
+    const res = await fetch(API + '/scores', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ player, ms: lastMs })
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    lastMs = null;
+    await refresh();
+  } catch (e) {
+    err.textContent = 'Could not save: ' + e.message;
+    saveBtn.disabled = false;
+  }
+});
+
+async function refresh() {
+  try {
+    const [scores, stats] = await Promise.all([
+      fetch(API + '/scores').then(r => r.json()),
+      fetch(API + '/stats').then(r => r.json())
+    ]);
+    const board = document.getElementById('board');
+    board.innerHTML = scores.length
+      ? scores.map((s, i) =>
+          `<tr><td>${i + 1}</td><td>${escapeHtml(s.player)}</td><td>${s.ms} ms</td></tr>`
+        ).join('')
+      : '<tr><td colspan="3">No scores yet. Be the first.</td></tr>';
+    document.getElementById('stats').textContent =
+      `${stats.plays} plays · best ${stats.best_ms} ms · average ${stats.avg_ms} ms`;
+  } catch (e) {
+    document.getElementById('board').innerHTML =
+      '<tr><td colspan="3">Leaderboard unavailable</td></tr>';
+  }
+}
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+refresh();
+setInterval(refresh, 15000);
+</script>
+
+</body>
+</html>

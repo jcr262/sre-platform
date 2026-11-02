@@ -44,5 +44,50 @@ host. Postgres listens on 5432 sinde the network even if nothing is published.
 - Step 3: write the API Dockerfile. Decide base image and the order of COPY vs 
 RUN pip install.
 
+### 2026-11-01 — Sprint 1 complete
+
+**Done**
+- API Dockerfile: python:3.11-slim, layers ordered so pip install stays cached
+- Web Dockerfile: nginx:alpine, config and index.html to separate paths
+- nginx.conf with /api/ proxy to the api service
+- docker-compose: 3 services, named volume, healthcheck, depends_on
+- .env and .env.example
+- Persistence tested: restart OK, down/up OK, down -v wipes it (expected)
+
+**Learned**
+- nginx resolves proxy_pass hostnames at startup, not per request. If the
+  upstream does not exist the container dies immediately.
+- Service-name DNS only exists inside the Compose network. `docker run` on its
+  own does not resolve other containers by name.
+- COPY: source is relative to the build context, destination is inside the
+  image. Two destinations means two COPY lines.
+- CMD vs CMD-SHELL: without a shell, $VARIABLES are not expanded.
+- Named volumes outlive containers. `down` keeps them, `down -v` destroys them.
+  Same idea as a PersistentVolumeClaim in Kubernetes.
+- Chose to duplicate values in .env instead of interpolating in compose, to keep
+  a single file as the source of truth.
+
+**Errors hit**
+- `docker built` instead of `build` — the error named the flag, not the typo
+- WORKDIR pointing at a file instead of a directory
+- proxy_pass to `web` (itself) instead of `api`
+- Same host port published on two services
+- Circular depends_on between api and web
+- Lowercase env var names; the app reads them uppercase
+
+## Sprint 1 retro — Oct 26 to Nov 1
+
+**Goal:** the app runs in Docker and data survives a restart
+**Result:** done — all six steps
+
+**Hours spent:** ~4, all on Nov 1
+**Observed velocity:** 4 h in one day, 0 during the week
+
+**What worked**
+- Writing the files myself instead of copying templates. Every error taught
+  something specific.
+
+**What to change for Sprint 2**
+- All the work landed on the last day. Use the weekday sessions.
 
 

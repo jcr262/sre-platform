@@ -91,3 +91,34 @@ RUN pip install.
 - All the work landed on the last day. Use the weekday sessions.
 
 
+### 2026-11-06 — Sprint 2, steps 1-3
+
+**Done**
+- Cluster up, snapshots `pre-sprint2`
+- Namespace manifest applied
+- Local registry running, images pushed and pulled from a node
+- Secret created with secretKeyRef planned for the api Deployment
+
+**Learned**
+- The image name contains the registry address. `docker push host:5000/name:tag`
+  goes there because the name says so, not because of config.
+- Two separate configs for an insecure registry: /etc/docker/daemon.json on the
+  laptop so Docker can push, /etc/rancher/k3s/registries.yaml on all three nodes
+  so k3s can pull. Restart required on both.
+- 10.182.120.1 is my laptop seen from the Multipass network, not a VM. One IP
+  per network a machine is attached to.
+- A manifest without metadata.namespace lands in `default`, even if the
+  namespace exists. Writing it in the file beats passing -n, because the
+  pipeline will not pass flags.
+- Having the YAML is not the same as the object existing. apply is what creates it.
+
+**Errors hit**
+- `http: server gave HTTP response to HTTPS client` — missing insecure-registries
+  in Docker's daemon.json
+- Secret created in `default` because the manifest had no namespace
+- .gitignore line for the real secret was never added; caught it with
+  `git status -s -uall` before any add
+
+**Time:** 3h30 — one hour of it on the registry
+**Next**
+- Step 4: Postgres Deployment + Service

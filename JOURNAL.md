@@ -122,3 +122,23 @@ RUN pip install.
 **Time:** 3h30 — one hour of it on the registry
 **Next**
 - Step 4: Postgres Deployment + Service
+
+### 2026-11-08 — Sprint 2, step 4
+
+**Done**
+- Postgres Deployment + Service `pql-demo`, endpoint verified
+- Broke it on purpose: wrong Secret name in secretRef
+
+**Learned**
+- Pod states tell you which phase failed, and each phase has a different owner
+- `logs` is useless when the container never started — only `describe` Events
+- `get pods` = symptom, `describe` = cause. That order does not change
+- Pending means the scheduler found no node: usually resources or an unbound volume
+- Endpoints is deprecated in 1.33+, EndpointSlice splits large Services into chunks
+
+**On the format**
+- Given manifest + break it + interview questions: step 4 in 25 min.
+  Build-from-scratch took 3h30 for three steps. Switching to this for 5-8.
+
+**Next**
+- Step 5: api Deployment with both probes

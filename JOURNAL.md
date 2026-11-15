@@ -142,3 +142,31 @@ RUN pip install.
 
 **Next**
 - Step 5: api Deployment with both probes
+
+### 2026-11-14 — Sprint 2, step 5
+
+**Done**
+- api Deployment + Service with both probes, 2 replicas
+- Breakage A: scaled postgres to 0 — pods went NotReady, no restarts
+- Breakage B: liveness pointed at /api/ready — restart loop confirmed
+
+**Learned**
+- Readiness failing takes a pod out of the Service; liveness failing kills it.
+  Confirmed both by observation, not theory.
+- App recovery time is NOT the same as the dependency's. Postgres came back in
+  seconds, the API took ~5 minutes — the psycopg connection pool holds dead
+  connections and has its own timeouts before discarding them.
+- Restart backoff is exponential. A pod that looped for a while waits up to 5
+  minutes before retrying, so a misplaced liveness probe makes recovery slower,
+  not faster. It worsens exactly what it was meant to fix.
+
+**Interview questions I could not fully answer**
+- Define liveness vs readiness in two sentences — I described the symptom, not
+  the definition
+- Intermittent errors with 3 replicas: the hint is that ONE replica is bad.
+  `logs deploy/api` mixes all three and hides it. Check each pod separately.
+- startupProbe: it solves slow AND variable startup. While active it disables
+  the other two probes.
+
+**Next**
+- Steps 6, 7, 8 + retro (~1h20)

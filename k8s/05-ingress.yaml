@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: reflex
+  namespace: reflex
+spec:
+  ingressClassName: traefik     # confirmá con el comando de arriba
+  rules:
+    - http:                     # sin "host": responde a cualquier nombre
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: web       # apunta a web, NO a api
+                port:
+                  number: 80

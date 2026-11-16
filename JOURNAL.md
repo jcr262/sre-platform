@@ -170,3 +170,34 @@ RUN pip install.
 
 **Next**
 - Steps 6, 7, 8 + retro (~1h20)
+
+### 2026-11-15 — Sprint 2, steps 6 and 7
+
+**Done**
+- web Deployment + Service, verified with port-forward
+- Ingress with Traefik, reachable from all three node IPs
+- Breakage (step 6): Service selector api → apis
+- Breakage (step 7): pathType Prefix → Exact
+
+**Learned**
+- A Deployment's selector is IMMUTABLE. Changing it would orphan the existing
+  pods — alive, consuming resources, managed by nobody. A Service's selector IS
+  mutable, because a Service references pods, it does not own them.
+- `endpoints <none>` is the most dangerous failure in Kubernetes: no pod errors,
+  no Events, no logs. Everything looks fine and nothing works. `get endpoints`
+  is the reflex when something does not respond.
+- k3s runs an `svclb` DaemonSet with a pod on every node listening on host port
+  80 and forwarding to the Traefik Service. That is why all three node IPs show
+  up as EXTERNAL-IP even though the Traefik pod only lives on cp.
+- pathType Exact matches only the exact path; Prefix matches everything below
+  it. With Exact, Traefik returns 404 without ever reaching the Service.
+- Reading the Network tab: the File column says which resource failed. A 404 on
+  favicon.ico is normal noise, not an app failure.
+
+**Pending**
+- Step 8 (node failure + post-mortem) — carried to Sprint 3
+- Interview questions for steps 6 and 7
+- Sprint retro
+
+**Next**
+- Step 8 and retro

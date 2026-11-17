@@ -1,0 +1,350 @@
+=== 22:24:28
+cp    Ready   control-plane   99d   v1.36.3+k3s1
+w1    Ready   <none>          99d   v1.36.3+k3s1
+w2    Ready   <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (4m35s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (4m34s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (4m34s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (4m35s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (4m34s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:24:44
+cp    Ready   control-plane   99d   v1.36.3+k3s1
+w1    Ready   <none>          99d   v1.36.3+k3s1
+w2    Ready   <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (4m50s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (4m49s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (4m49s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (4m50s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (4m49s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:24:59
+cp    Ready   control-plane   99d   v1.36.3+k3s1
+w1    Ready   <none>          99d   v1.36.3+k3s1
+w2    Ready   <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (5m5s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (5m4s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (5m4s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (5m5s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (5m4s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:25:14
+cp    Ready   control-plane   99d   v1.36.3+k3s1
+w1    Ready   <none>          99d   v1.36.3+k3s1
+w2    Ready   <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (5m20s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (5m19s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (5m19s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (5m20s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (5m19s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:25:29
+cp    Ready   control-plane   99d   v1.36.3+k3s1
+w1    Ready   <none>          99d   v1.36.3+k3s1
+w2    Ready   <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (5m36s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (5m35s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (5m35s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (5m36s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (5m35s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:25:45
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (5m51s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (5m50s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (5m50s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (5m51s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (5m50s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:26:00
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (6m6s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (6m5s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (6m5s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (6m6s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (6m5s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:26:15
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (6m22s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (6m21s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (6m21s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (6m22s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (6m21s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:26:31
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (6m37s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (6m36s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (6m36s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (6m37s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (6m36s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:26:46
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (6m52s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (6m51s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (6m51s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (6m52s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (6m51s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:27:01
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (7m7s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (7m6s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (7m6s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (7m7s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (7m6s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:27:16
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (7m23s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (7m22s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (7m22s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (7m23s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (7m22s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:27:32
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (7m38s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (7m37s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (7m37s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (7m38s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (7m37s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:27:47
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (7m53s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (7m52s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (7m52s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (7m53s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (7m52s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:28:02
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (8m9s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (8m8s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (8m8s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (8m9s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (8m8s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:28:18
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (8m24s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (8m23s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (8m23s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (8m24s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (8m23s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:28:33
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (8m39s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (8m38s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (8m38s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (8m39s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (8m38s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:28:48
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (8m55s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (8m54s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (8m54s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (8m55s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (8m54s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:29:04
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (9m10s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (9m9s ago)    47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (9m9s ago)    47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (9m10s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (9m9s ago)    26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:29:19
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (9m26s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (9m25s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (9m25s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (9m26s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (9m25s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:29:35
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (9m41s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (9m40s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (9m40s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (9m41s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (9m40s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:29:50
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (9m56s ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (9m55s ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (9m55s ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (9m56s ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (9m55s ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:30:05
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (10m ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (10m ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (10m ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (10m ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (10m ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:30:20
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (10m ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (10m ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (10m ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (10m ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (10m ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:30:36
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Running   4 (10m ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-xs895        1/1   Running   3 (10m ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running   3 (10m ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-gp4tb        1/1   Running   2 (10m ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running   2 (10m ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:30:51
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Terminating   4 (10m ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-s6gdd        0/1   Running       0             7s    10.42.0.62   cp    <none>   <none>
+api-8555b4d976-xs895        1/1   Running       3 (10m ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running       3 (10m ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-4bbt7        0/1   Running       0             7s    10.42.0.63   cp    <none>   <none>
+web-7b55548766-gp4tb        1/1   Terminating   2 (10m ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running       2 (10m ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:31:06
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Terminating   4 (11m ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-s6gdd        1/1   Running       0             23s   10.42.0.62   cp    <none>   <none>
+api-8555b4d976-xs895        1/1   Running       3 (11m ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running       3 (11m ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-4bbt7        1/1   Running       0             23s   10.42.0.63   cp    <none>   <none>
+web-7b55548766-gp4tb        1/1   Terminating   2 (11m ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running       2 (11m ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:31:22
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Terminating   4 (11m ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-s6gdd        1/1   Running       0             38s   10.42.0.62   cp    <none>   <none>
+api-8555b4d976-xs895        1/1   Running       3 (11m ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running       3 (11m ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-4bbt7        1/1   Running       0             38s   10.42.0.63   cp    <none>   <none>
+web-7b55548766-gp4tb        1/1   Terminating   2 (11m ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running       2 (11m ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:31:37
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Terminating   4 (11m ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-s6gdd        1/1   Running       0             54s   10.42.0.62   cp    <none>   <none>
+api-8555b4d976-xs895        1/1   Running       3 (11m ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running       3 (11m ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-4bbt7        1/1   Running       0             54s   10.42.0.63   cp    <none>   <none>
+web-7b55548766-gp4tb        1/1   Terminating   2 (11m ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running       2 (11m ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:31:53
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Terminating   4 (11m ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-s6gdd        1/1   Running       0             69s   10.42.0.62   cp    <none>   <none>
+api-8555b4d976-xs895        1/1   Running       3 (11m ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running       3 (11m ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-4bbt7        1/1   Running       0             69s   10.42.0.63   cp    <none>   <none>
+web-7b55548766-gp4tb        1/1   Terminating   2 (11m ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running       2 (11m ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:32:08
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Terminating   4 (12m ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-s6gdd        1/1   Running       0             84s   10.42.0.62   cp    <none>   <none>
+api-8555b4d976-xs895        1/1   Running       3 (12m ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running       3 (12m ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-4bbt7        1/1   Running       0             84s   10.42.0.63   cp    <none>   <none>
+web-7b55548766-gp4tb        1/1   Terminating   2 (12m ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running       2 (12m ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:32:23
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Terminating   4 (12m ago)   47h   10.42.1.32   w1    <none>   <none>
+api-8555b4d976-s6gdd        1/1   Running       0             99s   10.42.0.62   cp    <none>   <none>
+api-8555b4d976-xs895        1/1   Running       3 (12m ago)   47h   10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running       3 (12m ago)   47h   10.42.2.33   w2    <none>   <none>
+web-7b55548766-4bbt7        1/1   Running       0             99s   10.42.0.63   cp    <none>   <none>
+web-7b55548766-gp4tb        1/1   Terminating   2 (12m ago)   26h   10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running       2 (12m ago)   26h   10.42.2.32   w2    <none>   <none>
+
+=== 22:32:38
+cp    Ready      control-plane   99d   v1.36.3+k3s1
+w1    NotReady   <none>          99d   v1.36.3+k3s1
+w2    Ready      <none>          99d   v1.36.3+k3s1
+api-8555b4d976-m25jb        1/1   Terminating   4 (12m ago)   47h    10.42.1.32   w1    <none>   <none>
+api-8555b4d976-s6gdd        1/1   Running       0             115s   10.42.0.62   cp    <none>   <none>
+api-8555b4d976-xs895        1/1   Running       3 (12m ago)   47h    10.42.2.34   w2    <none>   <none>
+postgres-5b8bb4bf59-74h6p   1/1   Running       3 (12m ago)   47h    10.42.2.33   w2    <none>   <none>
+web-7b55548766-4bbt7        1/1   Running       0             115s   10.42.0.63   cp    <none>   <none>
+web-7b55548766-gp4tb        1/1   Terminating   2 (12m ago)   26h    10.42.1.30   w1    <none>   <none>
+web-7b55548766-kvbcp        1/1   Running       2 (12m ago)   26h    10.42.2.32   w2    <none>   <none>
+
+--- predicciones antes de levantar w1
+1. Terminating desaparecen: SI
+2. Pods vuelven a w1: NO
+3. Tiempo a Ready: 5 min
